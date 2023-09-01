@@ -6,8 +6,8 @@ class UserProfile(models.Model):
     password = models.CharField(max_length=19, blank=True)
     bio = models.TextField(blank=True)
     location = models.CharField(max_length=100, blank=True)
-    avatar_url = models.URLField(blank=True)
-    
+    avatar_url = models.TextField(blank=True)
+    name = models.CharField(max_length=100, blank=True)
     def __str__(self):
         return self.username+'--'+self.location
     
