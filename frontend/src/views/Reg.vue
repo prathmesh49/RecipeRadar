@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto lg:max-w-lg m-10">
-    <h4 class="font-serif font-bold to-blue-800">Sign Up</h4>
+    <h4 class="font-serif font-bold to-blue-800 my-5">Sign Up</h4>
     <form>
       <div class="relative z-0 w-full mb-6 group">
         <input

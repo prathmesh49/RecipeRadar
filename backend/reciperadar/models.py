@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 
 
@@ -8,6 +9,7 @@ class UserProfile(models.Model):
     location = models.CharField(max_length=100, blank=True)
     avatar_url = models.TextField(blank=True)
     name = models.CharField(max_length=100, blank=True)
+    
     def __str__(self):
         return self.username+'--'+self.location
     
@@ -19,8 +21,9 @@ class Recipe(models.Model):
     instructions = models.TextField()
     cuisine = models.CharField(max_length=50)
     category = models.CharField(max_length=50)
-    image = models.URLField(blank=True)
+    image = models.TextField(blank=True)
     UserProfile=models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+    created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
         return self.title+'--'+self.cuisine
@@ -34,3 +37,4 @@ class Review(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     rating = models.IntegerField()
     comment = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
