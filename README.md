@@ -42,3 +42,37 @@ To set up and run RecipeRadar locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/RecipeRadar.git
    cd RecipeRadar
+
+   Access the application at http://localhost:8080 in your web browser.
+
+## Usage
+
+   [Provide instructions on how to use the project]
+
+## APIs Used
+
+    RecipeRadar relies on the following external APIs:
+
+    Name of API 1
+    Name of API 2
+
+## API Endpoints
+
+    In the backend, RecipeRadar provides the following API endpoints:
+
+    GET /api/users: Retrieve all users.
+    GET /api/recipes: Retrieve all recipes.
+    POST /api/recipes: Create a new recipe.
+    [List other endpoints and their descriptions]
+    
+## Technology Stack
+
+    RecipeRadar is built using the following technologies:
+
+    Front-end: Vue.js
+    Back-end: Django
+    Database: PostgreSQL/MySQL/MongoDB (Choose one based on familiarity)
+    Contributors
+    Your Name
+    Contributor 1
+    Contributor 2
