@@ -32,7 +32,7 @@ RecipeRadar offers a range of features, including:
 
 ## Design Decisions & Assumptions
 
-    ![database-diagram](https://github.com/prathmesh49/RecipeRadar/assets/112652930/b7a0afdf-6f4d-4f4b-95a7-c7c62f7413d1)
+![database-diagram](https://github.com/prathmesh49/RecipeRadar/assets/112652930/b7a0afdf-6f4d-4f4b-95a7-c7c62f7413d1)
 
 
 ## Installation & Getting Started
