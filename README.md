@@ -1,12 +1,12 @@
-# RecipeRadar - Personalized Recipe Recommendation Platform
+# Flavor Fusion - Personalized Recipe Recommendation Platform
 
 ## Introduction
 
-RecipeRadar is a revolutionary recipe recommendation platform that empowers users to discover new recipes, tailor recommendations to their tastes, and engage with a vibrant food-loving community. This README provides an overview of the project, its key features, and how to get started.
+Flavor Fusion is a revolutionary recipe recommendation platform that empowers users to discover new recipes, tailor recommendations to their tastes, and engage with a vibrant food-loving community. This README provides an overview of the project, its key features, and how to get started.
 
 ## Deployed App
 
-[RecipeRadar - Live Demo](https://your-deployed-app-url.com)
+[Flavor Fusion - Live Demo](https://your-deployed-app-url.com)
 
 ## Video Walkthrough
 
@@ -14,7 +14,7 @@ RecipeRadar is a revolutionary recipe recommendation platform that empowers user
 
 ## Features
 
-RecipeRadar offers a range of features, including:
+Flavor Fusion offers a range of features, including:
 
 - **Personalized Recipe Recommendations**: Utilizes machine learning algorithms to analyze user profiles, ingredient preferences, and cooking behaviors to provide personalized recipe recommendations.
 
@@ -34,15 +34,14 @@ RecipeRadar offers a range of features, including:
 
 ![database-diagram](https://github.com/prathmesh49/RecipeRadar/assets/112652930/b7a0afdf-6f4d-4f4b-95a7-c7c62f7413d1)
 
-
 ## Installation & Getting Started
 
-To set up and run RecipeRadar locally, follow these steps:
+To set up and run Flavor Fusion locally, follow these steps:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/RecipeRadar.git
-   cd RecipeRadar
+   git clone https://github.com/your-username/FlavorFusion.git
+   cd FlavorFusion
 
    Access the application at http://localhost:8080 in your web browser.
 
@@ -52,14 +51,14 @@ To set up and run RecipeRadar locally, follow these steps:
 
 ## APIs Used
 
-    RecipeRadar relies on the following external APIs:
+    Flavor Fusion relies on the following external APIs:
 
     Name of API 1
     Name of API 2
 
 ## API Endpoints
 
-    In the backend, RecipeRadar provides the following API endpoints:
+    In the backend, Flavor Fusion provides the following API endpoints:
 
     GET /api/users: Retrieve all users.
     GET /api/recipes: Retrieve all recipes.
@@ -68,7 +67,7 @@ To set up and run RecipeRadar locally, follow these steps:
 
 ## Technology Stack
 
-    RecipeRadar is built using the following technologies:
+    Flavor Fusion is built using the following technologies:
 
     Front-end: Vue.js
     Back-end: Django
