@@ -6,7 +6,7 @@ Flavor Fusion is a revolutionary recipe recommendation platform that empowers us
 
 ## Deployed App
 
-[Flavor Fusion - Live Demo](2flavorfusion.netlify.app/)
+[Flavor Fusion - Live Demo](https://2flavorfusion.netlify.app/)
 
 ## Video Walkthrough
 
