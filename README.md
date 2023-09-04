@@ -32,7 +32,7 @@ RecipeRadar offers a range of features, including:
 
 ## Design Decisions & Assumptions
 
-    ![Database](../RecipeRadar/frontend/public/img/icons/database-diagram.png)
+    ![Database](./image/database-diagram.png)
 
 
 ## Installation & Getting Started
