@@ -240,7 +240,7 @@
         >.
       </p>
 
-      <figure class="max-w-screen-md mt-3">
+      <figure class="max-w-screen-md mt-3" v-for="el in reviews_data">
         <div class="flex items-center mb-4 text-yellow-300">
           <svg
             class="w-5 h-5 mr-1"
@@ -300,9 +300,7 @@
         </div>
         <blockquote>
           <p class="text-2xl font-semibold text-gray-900 dark:text-white">
-            "Flowbite is just awesome. It contains tons of predesigned
-            components and pages starting from login screen to complex
-            dashboard. Perfect choice for your next SaaS application."
+            {{ el.comment }}
           </p>
         </blockquote>
         <figcaption class="flex items-center mt-6 space-x-3">
@@ -315,10 +313,10 @@
             class="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700"
           >
             <cite class="pr-3 font-medium text-gray-900 dark:text-white"
-              >Bonnie Green</cite
+              >{{ el.date_created }}</cite
             >
             <cite class="pl-3 text-sm text-gray-500 dark:text-gray-400"
-              >CTO at Flowbite</cite
+              >{{ el.rating }}</cite
             >
           </div>
         </figcaption>
@@ -342,8 +340,10 @@ export default {
     const user = ref("");
     let rating = ref("");
     let comment = ref("");
+    let reviews_data = ref([])
 
     onBeforeMount(async () => {
+      
       data.value = JSON.parse(sessionStorage.getItem("clickedItem"));
       const dateObj = new Date(data.value.created_date);
       const monthNames = [
@@ -364,7 +364,7 @@ export default {
       const day = dateObj.getUTCDate();
       const year = dateObj.getUTCFullYear();
       myDate.value = `${month} ${day}, ${year}`;
-
+      render_reviews()
       const userProfileUrl = data.value.UserProfile;
       try {
         const response = await axios.get(userProfileUrl);
@@ -414,7 +414,28 @@ export default {
     const clear_commit = () => {
       rating.value = "";
       comment.value = "";
+      render_reviews()
     };
+    const render_reviews = async () => {
+      let arr = data.value.url.split("");
+      let n = arr.length
+      let recipe = arr[n-2]
+      console.log(recipe)
+      let url = `http://127.0.0.1:8000/api/reviews/recipe/${recipe}/`
+      if(!url) return;
+      try {
+        const response = await axios.get(url);
+        if (response.status === 200) {
+          console.log(response.data)
+          reviews_data.value = response.data
+        } else {
+          alert("Failed to fetch user data. Please check your credentials.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred while fetching reviews data.");
+      }
+    }
 
     return {
       data,
@@ -423,6 +444,7 @@ export default {
       rating,
       comment,
       saveCommit,
+      reviews_data,
     };
   },
 };

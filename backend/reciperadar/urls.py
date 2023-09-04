@@ -19,4 +19,5 @@ urlpatterns += [
 # Custom action for retrieving a user profile by username
 urlpatterns += [
     path('users/username/<str:username>/', UserViewSet.as_view({'get': 'getByUsername'}), name='user-get-by-username'),
+    path('reviews/recipe/<str:recipe>/', ReviewViewSet.as_view({'get': 'getByRecipe '}), name='review-get-by-recipe'),
 ]

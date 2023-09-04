@@ -6,11 +6,11 @@ Flavor Fusion is a revolutionary recipe recommendation platform that empowers us
 
 ## Deployed App
 
-[Flavor Fusion - Live Demo](https://your-deployed-app-url.com)
+[Flavor Fusion - Live Demo](2flavorfusion.netlify.app/)
 
 ## Video Walkthrough
 
-[Watch Video Walkthrough](https://your-video-walkthrough-url.com)
+[Watch Video Walkthrough](https://drive.google.com/drive/folders/1c4UwAENnihLLbOGFYz8VXc3orJcL3ars?usp=drive_link)
 
 ## Features
 

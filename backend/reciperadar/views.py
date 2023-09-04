@@ -27,3 +27,13 @@ class SavedRecipeViewSet(viewsets.ModelViewSet):
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset= Review.objects.all()
     serializer_class= ReviewSearializers
+    
+    @action(methods=['get'], detail=False, url_path='recipe/(?P<recipe>\w+)')
+    def getByRecipe(self, request, recipe):
+        # Filter reviews based on the specified recipe
+        reviews = Review.objects.filter(recipe=recipe)
+        
+        # Serialize the queryset of reviews
+        data = ReviewSearializers(reviews, many=True, context={'request': request}).data
+        
+        return Response(data, status=status.HTTP_200_OK)
