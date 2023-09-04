@@ -1,10 +1,19 @@
-<template >
-  <nav class="bg-white dark:bg-gray-900 fixed w-full z-10 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FlavorFusion</span>
-  </a>
+<template>
+  <nav
+    class="bg-orange-500 dark:bg-gray-900 fixed w-full z-10 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+  >
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0"
+    >
+      <a class="flex items-center">
+        <router-link to="/">
+          <img
+            src="../public/img/icons/FlavorFusionbg.png"
+            class="h-8 mr-3"
+            alt="Flowbite Logo"
+          />
+        </router-link>
+      </a>
       <div class="flex md:order-2">
         <button
           data-collapse-toggle="navbar-sticky"
@@ -36,18 +45,18 @@
         id="navbar-sticky"
       >
         <ul
-          class="flex flex-col  md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+          class="flex flex-col md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-orange-500"
         >
           <li>
             <p
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline underline-offset-4 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
             >
               <router-link to="/">Home</router-link>
             </p>
           </li>
           <li>
             <p
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline underline-offset-4 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
             >
               <router-link to="/about">Add Recipe</router-link>
             </p>
@@ -55,22 +64,22 @@
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline underline-offset-4 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >Services</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline underline-offset-4 md:p-0 md:dark:hover:underline dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               ><router-link to="/login">Log in</router-link></a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
+              class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline underline-offset-4 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >
               <router-link to="/register">Sign Up</router-link></a
             >
           </li>
@@ -79,13 +88,12 @@
     </div>
   </nav>
   <div class="pdt-40">
-
     <router-view />
   </div>
-  <Footer msg=""/>
+  <Footer msg="" />
 </template>
 <script setup>
-import Footer from './views/Footer.vue';
+import Footer from "./views/Footer.vue";
 </script>
 
 <style lang="scss">
@@ -95,8 +103,8 @@ import Footer from './views/Footer.vue';
   -moz-osx-font-smoothing: grayscale;
   // color: #2c3e50;
 }
-.pdt-40{
-  padding-top: 150px;
+.pdt-40 {
+  padding-top: 80px;
 }
 
 nav {
@@ -107,7 +115,8 @@ nav {
     // color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      text-decoration: underline;
+      text-underline-offset: 5px;
     }
   }
 }
