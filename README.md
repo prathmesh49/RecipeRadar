@@ -32,7 +32,8 @@ RecipeRadar offers a range of features, including:
 
 ## Design Decisions & Assumptions
 
-- [List your design decisions and assumptions here]
+    ![Database](../RecipeRadar/frontend/public/img/icons/database-diagram.png)
+
 
 ## Installation & Getting Started
 
@@ -64,7 +65,7 @@ To set up and run RecipeRadar locally, follow these steps:
     GET /api/recipes: Retrieve all recipes.
     POST /api/recipes: Create a new recipe.
     [List other endpoints and their descriptions]
-    
+
 ## Technology Stack
 
     RecipeRadar is built using the following technologies:
