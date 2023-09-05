@@ -34,7 +34,8 @@
       <label
         for="small-input"
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Ingredients</label
+        >Ingredients
+        <label class="text-xs">( add ingredients by "," saperated )</label></label
       >
       <input
         type="text"
@@ -99,7 +100,7 @@
     <button
       type="button"
       @click="submitRecipe"
-      class="text-white my-3 bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
+      class="text-white my-3 bg-orange-500 hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
     >
       <path
         fill-rule="evenodd"
