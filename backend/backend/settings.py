@@ -135,6 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",  # Example: Allow access from Vue.js development server
     "http://127.0.0.1:9000",  # Another example
+    "https://2flavorfusion.netlify.app",
     # Add more allowed origins as needed
 ]
 

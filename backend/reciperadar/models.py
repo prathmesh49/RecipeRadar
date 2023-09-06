@@ -26,7 +26,7 @@ class Recipe(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
-        return self.title+'--'+self.cuisine
+        return self.title+" - "
     
 class SavedRecipe(models.Model):
     UserProfile=models.ForeignKey(UserProfile,on_delete=models.CASCADE)

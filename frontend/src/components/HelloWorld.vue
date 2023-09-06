@@ -312,12 +312,12 @@
           <div
             class="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700"
           >
-            <cite class="pr-3 font-medium text-gray-900 dark:text-white"
-              >{{ el.date_created }}</cite
-            >
-            <cite class="pl-3 text-sm text-gray-500 dark:text-gray-400"
-              >{{ el.rating }}</cite
-            >
+            <cite class="pr-3 font-medium text-gray-900 dark:text-white">{{
+              el.date_created
+            }}</cite>
+            <cite class="pl-3 text-sm text-gray-500 dark:text-gray-400">{{
+              el.rating
+            }}</cite>
           </div>
         </figcaption>
       </figure>
@@ -328,6 +328,7 @@
 <script>
 import { ref, onBeforeMount } from "vue";
 import axios from "axios";
+import router from "@/router";
 
 export default {
   name: "HelloWorld",
@@ -340,10 +341,9 @@ export default {
     const user = ref("");
     let rating = ref("");
     let comment = ref("");
-    let reviews_data = ref([])
+    let reviews_data = ref([]);
 
     onBeforeMount(async () => {
-      
       data.value = JSON.parse(sessionStorage.getItem("clickedItem"));
       const dateObj = new Date(data.value.created_date);
       const monthNames = [
@@ -364,7 +364,7 @@ export default {
       const day = dateObj.getUTCDate();
       const year = dateObj.getUTCFullYear();
       myDate.value = `${month} ${day}, ${year}`;
-      render_reviews()
+      render_reviews();
       const userProfileUrl = data.value.UserProfile;
       try {
         const response = await axios.get(userProfileUrl);
@@ -382,6 +382,13 @@ export default {
     const saveCommit = async () => {
       const url = `http://127.0.0.1:8000/api/reviews/`;
       let valid_num = parseInt(rating.value);
+      let user_data = JSON.parse(sessionStorage.getItem("user_id"));
+      console.log(user_data);
+      if (user_data === null || user_data === undefined) {
+        alert("please login first ");
+        router.push('login');
+        return;
+      }
 
       if (isNaN(valid_num) || valid_num > 5 || valid_num < 0) {
         alert("Please provide a rating between 0 and 5.");
@@ -414,20 +421,20 @@ export default {
     const clear_commit = () => {
       rating.value = "";
       comment.value = "";
-      render_reviews()
+      render_reviews();
     };
     const render_reviews = async () => {
       let arr = data.value.url.split("");
-      let n = arr.length
-      let recipe = arr[n-2]
-      console.log(recipe)
-      let url = `http://127.0.0.1:8000/api/reviews/recipe/${recipe}/`
-      if(!url) return;
+      let n = arr.length;
+      let recipe = arr[n - 2];
+      console.log(recipe);
+      let url = `http://127.0.0.1:8000/api/reviews/recipe/${recipe}/`;
+      if (!url) return;
       try {
         const response = await axios.get(url);
         if (response.status === 200) {
-          console.log(response.data)
-          reviews_data.value = response.data
+          console.log(response.data);
+          reviews_data.value = response.data;
         } else {
           alert("Failed to fetch user data. Please check your credentials.");
         }
@@ -435,7 +442,7 @@ export default {
         console.error("Error:", error);
         alert("An error occurred while fetching reviews data.");
       }
-    }
+    };
 
     return {
       data,

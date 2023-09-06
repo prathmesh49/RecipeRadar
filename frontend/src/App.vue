@@ -27,7 +27,7 @@
             class="w-5 h-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            fill="currentColor"
             viewBox="0 0 17 14"
           >
             <path
@@ -61,6 +61,7 @@
               <router-link to="/about">Add Recipe</router-link>
             </p>
           </li>
+          
           <li>
             <a
               href="#"
@@ -78,10 +79,14 @@
           <li>
             <a
               href="#"
-              class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:underline underline-offset-4 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pl-3 pr-4 text-white rounded hover-bg-gray-100 md:hover-bg-transparent md:hover-underline underline-offset-4 md:p-0 md:dark:hover:text-blue-500 dark-text-white dark:hover-bg-gray-700 dark:hover-text-white md:dark-hover-bg-transparent dark-border-gray-700"
             >
-              <router-link to="/register">Sign Up</router-link></a
-            >
+              <router-link to="/register">Sign Up</router-link>
+            </a>
+          </li>
+          <!-- Add the SearchBar component here -->
+          <li>
+            <SearchBar />
           </li>
         </ul>
       </div>
@@ -92,8 +97,16 @@
   </div>
   <Footer msg="" />
 </template>
-<script setup>
+
+<script>
 import Footer from "./views/Footer.vue";
+import SearchBar from "./components/SearchBar.vue";
+export default {
+  components: {
+    Footer,
+    SearchBar, // Register the SearchBar component
+  },
+};
 </script>
 
 <style lang="scss">
