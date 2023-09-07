@@ -10,7 +10,7 @@ Flavor Fusion is a revolutionary recipe recommendation platform that empowers us
 
 ## Video Walkthrough
 
-[Watch Video Walkthrough](https://drive.google.com/drive/folders/1c4UwAENnihLLbOGFYz8VXc3orJcL3ars?usp=drive_link)
+[Watch Video Walkthrough](https://vimeo.com/manage/videos/861673402/845e88ae53)
 
 ## Features
 
