@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto 2xl:max-w-5xl grid 2xl:grid-cols-3 gap-5 p-4 sm:grid-cols-2 ">
+  <div class="container mx-auto 2xl:max-w-5xl grid 2xl:grid-cols-3 gap-5 p-4 sm:grid-cols-2 py5">
     
     <div
       class="w-full max-w-sm bg-white border-gray-200 rounded-lg"

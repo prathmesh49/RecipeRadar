@@ -61,7 +61,7 @@
               <router-link to="/about">Add Recipe</router-link>
             </p>
           </li>
-          
+
           <li>
             <a
               href="#"
@@ -117,7 +117,7 @@ export default {
   // color: #2c3e50;
 }
 .pdt-40 {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 nav {
